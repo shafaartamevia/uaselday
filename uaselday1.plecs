@@ -57,7 +57,7 @@ Plecs {
     Index         "1"
   }
   Schematic {
-    Location      [0, 23; 1280, 709]
+    Location      [0, 26; 1280, 712]
     ZoomFactor    0.873846
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -166,22 +166,22 @@ Plecs {
       Flipped       off
       LabelPosition south
       Location      [0, 26; 1280, 785]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACdvwCAAAAA/sAAAAQAFoAbwBvA"
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAC3PwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAnYAAABoAP///wAAAAMAAAUAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABQAAAABQAP///wAABEgAAAJ2AAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAtwAAABoAP///wAAAAMAAAUAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAAAAAAAo8AAAUAAAAAgQAABEgAAALcAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[\""
-"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -736,7 +736,7 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "14*inner_Kp"
+        Value         "13*inner_Kp"
         Show          off
       }
       Parameter {
