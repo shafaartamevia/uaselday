@@ -165,11 +165,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 26; 1280, 785]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAC3PwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 33; 1280, 720]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAClPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAtwAAABoAP///wAAAAMAAAUAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAAAAAAAo8AAAUAAAAAgQAABEgAAALcAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAApQAAABoAP///wAAAAMAAAUAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAAAAAfMAAAUAAAAAWwAABEgAAAKUAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -181,7 +181,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -395,7 +395,7 @@ Plecs {
       }
       Parameter {
         Variable      "f"
-        Value         "10000"
+        Value         "fsw"
         Show          off
       }
       Parameter {
@@ -736,7 +736,7 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "13*inner_Kp"
+        Value         "14*inner_Kp"
         Show          off
       }
       Parameter {
@@ -868,11 +868,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [320, 136; 670, 381]
+      Location      [320, 136; 670, 399]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAADaAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAAAV4AAADsAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1127,51 +1127,52 @@ Plecs {
       }
     }
     Component {
-      Type          Gain
-      Name          "Gain"
+      Type          Reference
+      SrcComponent  "Components/Electrical/Passive Components/R3"
+      Name          "R3"
       Show          on
-      Position      [175, 470]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "K"
-        Value         "Vin"
-        Show          off
+      Position      [460, 315]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Frame         [-8, -15; 8, 15]
+      Terminal {
+        Type          Port
+        Position      [0, -20]
+        Direction     up
       }
-      Parameter {
-        Variable      "Multiplication"
-        Value         "1"
-        Show          off
+      Terminal {
+        Type          Port
+        Position      [0, 20]
+        Direction     down
       }
-      Parameter {
-        Variable      "OutputDataType"
-        Value         "11"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataTypeOverflowMode"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "GainDataType"
-        Value         "11"
-        Show          off
+      Terminal {
+        Type          Input
+        Position      [-10, 10]
+        Direction     left
       }
     }
     Component {
-      Type          Constant
-      Name          "Constant"
+      Type          Step
+      Name          "Step"
       Show          on
-      Position      [120, 470]
+      Position      [460, 400]
       Direction     right
       Flipped       off
       LabelPosition south
-      Frame         [-10, -10; 10, 10]
       Parameter {
-        Variable      "Value"
-        Value         "D"
+        Variable      "Time"
+        Value         "4"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "R"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "4"
         Show          off
       }
       Parameter {
@@ -1181,16 +1182,31 @@ Plecs {
       }
     }
     Component {
-      Type          Resistor
-      Name          "R1"
+      Type          Step
+      Name          "Step1"
       Show          on
-      Position      [460, 315]
-      Direction     up
+      Position      [175, 470]
+      Direction     right
       Flipped       off
-      LabelPosition east
+      LabelPosition south
       Parameter {
-        Variable      "R"
+        Variable      "Time"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
         Value         "R"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "D*Vin"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
         Show          off
       }
     }
@@ -1214,7 +1230,7 @@ Plecs {
       Branch {
         Points        [460, 370]
         Branch {
-          DstComponent  "R1"
+          DstComponent  "R3"
           DstTerminal   2
         }
         Branch {
@@ -1226,7 +1242,7 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "R1"
+      SrcComponent  "R3"
       SrcTerminal   1
       Points        [460, 265]
       Branch {
@@ -1292,8 +1308,8 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Gain"
-      SrcTerminal   2
+      SrcComponent  "Step1"
+      SrcTerminal   1
       DstComponent  "Sum1"
       DstTerminal   2
     }
@@ -1447,10 +1463,11 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Constant"
+      SrcComponent  "Step"
       SrcTerminal   1
-      DstComponent  "Gain"
-      DstTerminal   1
+      Points        [485, 400]
+      DstComponent  "R3"
+      DstTerminal   3
     }
     Annotation {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
