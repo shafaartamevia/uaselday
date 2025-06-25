@@ -165,11 +165,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 33; 1280, 720]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAClPwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 33; 1280, 729]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACnfwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAApQAAABoAP///wAAAAMAAAUAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAAAAAfMAAAUAAAAAWwAABEgAAAKUAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAp0AAABoAP///wAAAAMAAAUAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAAAAAfMAAAUAAAAAWwAABEgAAAKdAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -736,7 +736,7 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "14*inner_Kp"
+        Value         "2*inner_Kp"
         Show          off
       }
       Parameter {
